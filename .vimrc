@@ -1,5 +1,6 @@
 set nocompatible
 set number
+set relativenumber
 set ruler
 set linebreak
 set scrolloff=3
