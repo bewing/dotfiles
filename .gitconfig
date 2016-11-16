@@ -170,3 +170,7 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+    name = Brandon Ewing
+    email = brandon.ewing@warningg.com
