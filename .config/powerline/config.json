@@ -1,0 +1,8 @@
+{
+    "ext": {
+        "shell": {
+            "theme": "multi_leftonly",
+            "colorscheme": "solarized"
+        }
+    }
+}
