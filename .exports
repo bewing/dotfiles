@@ -30,5 +30,3 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER='less -X';
 
 export LD_LIBRARY_PATH=~/lib
-
-export GREP_OPTIONS='--exclude-dir=.svn --exclude-dir=.git --color=auto'
