@@ -30,3 +30,5 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER='less -X';
 
 export LD_LIBRARY_PATH=~/lib
+
+export POWERLINE_CONFIG_COMMAND=/usr/local/bin/powerline-config
