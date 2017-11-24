@@ -7,5 +7,6 @@
 #	export TERM='xterm-256color';
 #fi;
 #source ~/.liquidprompt/liquidprompt
+powerline-daemon -q
 source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
 eval `dircolors ~/.dir_colors`
