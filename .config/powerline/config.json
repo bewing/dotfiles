@@ -3,6 +3,9 @@
         "shell": {
             "theme": "multi_leftonly",
             "colorscheme": "solarized"
+        },
+        "tmux": {
+            "colorscheme": "solarized"
         }
     }
 }
