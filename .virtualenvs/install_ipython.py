@@ -1,8 +1,9 @@
+import subprocess
 import sys
-import pip
 
 if sys.version_info.major == 3:
     ipy = "ipython"
 else:
     ipy = "ipython<6"
-pip.main(["install", ipy, "pygments_style_solarized"])
+
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', ipy, 'pygments_style_solarized'])
