@@ -12,3 +12,7 @@ fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
+# Generate J Aliases
+if [[ -f ~/generate_j_aliases.sh ]]; then
+    . ~/generate_j_aliases.sh
+fi

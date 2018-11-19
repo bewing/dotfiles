@@ -8,5 +8,5 @@
 #fi;
 #source ~/.liquidprompt/liquidprompt
 ~/.local/bin/powerline-daemon -q
-source /home/bewing/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+source ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 eval `dircolors ~/.dir_colors`
