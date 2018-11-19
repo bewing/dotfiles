@@ -32,7 +32,7 @@ export MANPAGER='less -X';
 export LD_LIBRARY_PATH=~/lib
 
 export POWERLINE_CONFIG_COMMAND=~/.local/bin/powerline-config
-export POWERLINE_COMMAND=~/.local/bin/powerline-config
+export POWERLINE_COMMAND=~/.local/bin/powerline
 
 export DOCKER_HOST=tcp://0.0.0.0:2375
 
