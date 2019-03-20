@@ -30,3 +30,5 @@ let g:miniBufExplModSelTarget = 1
 
 autocmd FileType php setlocal sw=2 ts=2 softtabstop=2
 nnoremap <S-tab> :bn!<cr>
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
