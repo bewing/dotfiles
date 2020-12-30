@@ -1,12 +1,17 @@
-# Shell prompt based on the Solarized Dark theme.
-# Screenshot: http://i.imgur.com/EkEtphC.png
-# Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
-# iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
-#
-#if infocmp xterm-256color >/dev/null 2>&1; then
-#	export TERM='xterm-256color';
-#fi;
-#source ~/.liquidprompt/liquidprompt
-~/.pyenv/versions/3.8.2/bin/powerline-daemon -q
-source ~/.pyenv/versions/3.8.2/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-eval `dircolors ~/.dir_colors`
+# Powerline, if it's there.
+if [ -f ~/.pyenv/bin/pyenv ]; then
+    pyver=$(pyenv global)
+    if [ -f ~/.pyenv/versions/${pyver}/bin/powerline-daemon ]; then
+        export POWERLINE_BASE=~/.pyenv/versions/${pyver}
+        export POWERLINE_LIB=${POWERLINE_BASE}/lib/python${pyver%.*}
+        export POWERLINE_CONFIG_COMMAND=${POWERLINE_BASE}/bin/powerline-config
+        export POWERLINE_COMMAND=${POWERLINE_BASE}/bin/powerline
+        source ${POWERLINE_LIB}/site-packages/powerline/bindings/bash/powerline.sh
+        ${POWERLINE_BASE}/bin/powerline-daemon -q
+    fi
+    unset pyver
+fi
+
+if [ -f ~/.dir_colors ]; then
+    eval `dircolors ~/.dir_colors`
+fi
