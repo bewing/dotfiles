@@ -1,6 +1,6 @@
 # Powerline, if it's there.
 if [ -f ~/.pyenv/bin/pyenv ]; then
-    pyver=$(pyenv global)
+    pyver=$(pyenv global | head -n 1)
     if [ -f ~/.pyenv/versions/${pyver}/bin/powerline-daemon ]; then
         export POWERLINE_BASE=~/.pyenv/versions/${pyver}
         export POWERLINE_LIB=${POWERLINE_BASE}/lib/python${pyver%.*}
