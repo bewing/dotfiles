@@ -1,17 +1,4 @@
-# Powerline, if it's there.
-if [ -f ~/.pyenv/bin/pyenv ]; then
-    pyver=$(pyenv global | head -n 1)
-    if [ -f ~/.pyenv/versions/${pyver}/bin/powerline-daemon ]; then
-        export POWERLINE_BASE=~/.pyenv/versions/${pyver}
-        export POWERLINE_LIB=${POWERLINE_BASE}/lib/python${pyver%.*}
-        export POWERLINE_CONFIG_COMMAND=${POWERLINE_BASE}/bin/powerline-config
-        export POWERLINE_COMMAND=${POWERLINE_BASE}/bin/powerline
-        source ${POWERLINE_LIB}/site-packages/powerline/bindings/bash/powerline.sh
-        ${POWERLINE_BASE}/bin/powerline-daemon -q
-    fi
-    unset pyver
+if [ -f ~/bin/oh-my-posh-wsl ]; then
+    eval "$(~/bin/oh-my-posh-wsl --init --shell bash --config ~/.poshthemes/bewing.omp.json)"
 fi
-
-if [ -f ~/.dir_colors ]; then
-    eval `dircolors ~/.dir_colors`
-fi
+eval `dircolors ~/.dir_colors`
